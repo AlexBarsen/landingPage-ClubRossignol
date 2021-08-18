@@ -8,27 +8,39 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
-} from "./sidebarElements";
+} from "./SidebarElements";
 
 interface Props {
   isOpen: boolean;
   toggle: () => void;
 }
 
-const Sidebar: FC<Props> = ({ toggle }) => {
+const Sidebar: FC<Props> = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer onClick={toggle}>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="restaurant">Restaurant</SidebarLink>
-          <SidebarLink to="rental">Rental</SidebarLink>
-          <SidebarLink to="shop">Shop</SidebarLink>
-          <SidebarLink to="hotel">Hotel</SidebarLink>
-          <SidebarLink to="contact">Contact</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>
+            About
+          </SidebarLink>
+          <SidebarLink to="restaurant" onClick={toggle}>
+            Restaurant
+          </SidebarLink>
+          <SidebarLink to="rental" onClick={toggle}>
+            Rental
+          </SidebarLink>
+          <SidebarLink to="shop" onClick={toggle}>
+            Shop
+          </SidebarLink>
+          <SidebarLink to="hotel" onClick={toggle}>
+            Hotel
+          </SidebarLink>
+          <SidebarLink to="contact" onClick={toggle}>
+            Contact
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/rental">Rental Application</SidebarRoute>

@@ -4,12 +4,12 @@ import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
   background: #000;
-  height: 80px;
+  height: 8rem;
   /* margin-top: -80px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -22,21 +22,21 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 8rem;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
-  max-width: 1100px;
+  padding: 0 2.4rem;
+  max-width: 110rem;
 `;
 
 export const NavLogo = styled(LinkR)`
   color: red;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
+  margin-left: 2.4rem;
   font-weight: bold;
   text-decoration: none;
 `;
@@ -61,7 +61,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
+  margin-right: -2.2rem;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -96,12 +96,12 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
+  border-radius: 5rem;
   background: #01bf71;
   white-space: nowrap;
-  padding: 10px 22px;
+  padding: 1rem 2.2rem;
   color: #010606;
-  font-size: 16px;
+  font-size: 1.6rem;
   outline: none;
   border: none;
   cursor: pointer;
