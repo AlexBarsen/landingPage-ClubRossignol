@@ -5,6 +5,10 @@
   font-family: "ENcode Sans Expanded", sans-serif;
 }
 
+body {
+  padding: 2.5rem;
+}
+
 html {
   font-size: 62.5%;
 }

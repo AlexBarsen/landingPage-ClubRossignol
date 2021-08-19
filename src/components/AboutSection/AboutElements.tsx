@@ -3,8 +3,13 @@ import styled from "styled-components";
 export const AboutContainer = styled.div`
   margin-top: -9.5rem;
   padding: 10rem 0;
+  min-height: 86rem;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  background: rgba(255, 228, 92, 0.6);
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(244, 217, 73, 1),
+    rgba(244, 217, 73, 1)
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,11 +20,6 @@ export const AboutWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-export const AboutHeading = styled.h1`
-  font-size: 4rem;
-  margin-bottom: 5rem;
 `;
 
 export const AboutFeatures = styled.div`

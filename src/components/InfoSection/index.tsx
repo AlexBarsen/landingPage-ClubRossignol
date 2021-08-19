@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   InfoContainer,
   InfoWrapper,
@@ -14,25 +14,62 @@ import {
   InfoImage,
 } from "./InfoElements";
 
-// import { Button } from "../Button/ButtonElement";
+import { Button } from "../Button/ButtonElement";
 
-const InfoSection = () => {
+interface Props {
+  section: any;
+  imgStart: boolean;
+}
+
+interface sectionValues {
+  id: string;
+  topLine: string;
+  headline: string;
+  description1: string;
+  description2: string;
+  buttonLabel: string;
+  image: string;
+  primary: boolean;
+}
+
+const InfoSection: FC<Props> = ({ section, imgStart }) => {
+  const {
+    id,
+    topLine,
+    headline,
+    description1,
+    description2,
+    buttonLabel,
+    image,
+    primary,
+  }: sectionValues = section;
   return (
     <>
-      <InfoContainer>
-        <InfoWrapper>
-          <InfoRow>
+      <InfoContainer id={id} primary={primary}>
+        <InfoWrapper primary={primary}>
+          <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>Top Line</TopLine>
-                <Heading>Heading</Heading>
-                <Subtitle>Subtitle</Subtitle>
-                <ButtonWrapper>{/* <Button>Button</Button> */}</ButtonWrapper>
+                <TopLine>{topLine}</TopLine>
+                <Heading>{headline}</Heading>
+                <Subtitle>{description1}</Subtitle>
+                <Subtitle>{description2}</Subtitle>
+                <ButtonWrapper>
+                  <Button
+                    to="/"
+                    paddingBig={true}
+                    primary={primary}
+                    dark={true}
+                    fontBig={true}
+                  >
+                    {buttonLabel}
+                  </Button>
+                </ButtonWrapper>
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImageWrapper>
-                <InfoImage />
+              <ImageWrapper primary={primary}>
+                <InfoImage src={image} />
               </ImageWrapper>
             </Column2>
           </InfoRow>

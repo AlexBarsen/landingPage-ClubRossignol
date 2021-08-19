@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AboutContainer,
-  AboutWrapper,
-  AboutHeading,
-  AboutFeatures,
-} from "./AboutElements";
+import { AboutContainer, AboutWrapper, AboutFeatures } from "./AboutElements";
 
 import Feature from "../Feature/index";
 import FeaturesData from "./features";
@@ -14,7 +9,7 @@ const AboutSection = () => {
     <>
       <AboutContainer id="about">
         <AboutWrapper>
-          <AboutHeading>Features</AboutHeading>
+          {/* <AboutHeading>Features</AboutHeading> */}
           <AboutFeatures>
             {FeaturesData.map((feature) => (
               <Feature key={feature.id} feature={feature} />
