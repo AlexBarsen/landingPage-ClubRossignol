@@ -23,22 +23,64 @@ const Sidebar: FC<Props> = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink
+            to="about"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-75}
+            onClick={toggle}
+          >
             About
           </SidebarLink>
-          <SidebarLink to="restaurant" onClick={toggle}>
+          <SidebarLink
+            to="restaurant"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-75}
+            onClick={toggle}
+          >
             Restaurant
           </SidebarLink>
-          <SidebarLink to="rental" onClick={toggle}>
+          <SidebarLink
+            to="rental"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-75}
+            onClick={toggle}
+          >
             Rental
           </SidebarLink>
-          <SidebarLink to="shop" onClick={toggle}>
+          <SidebarLink
+            to="shop"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-75}
+            onClick={toggle}
+          >
             Shop
           </SidebarLink>
-          <SidebarLink to="hotel" onClick={toggle}>
+          <SidebarLink
+            to="hotel"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-75}
+            onClick={toggle}
+          >
             Hotel
           </SidebarLink>
-          <SidebarLink to="contact" onClick={toggle}>
+          <SidebarLink
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-75}
+            onClick={toggle}
+          >
             Contact
           </SidebarLink>
         </SidebarMenu>

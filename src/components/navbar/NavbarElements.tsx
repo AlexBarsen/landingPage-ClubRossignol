@@ -5,40 +5,35 @@ import { Link as LinkS } from "react-scroll";
 export const Nav = styled.nav`
   background: #000;
   height: 8rem;
-  /* margin-top: -80px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 2rem;
-  position: sticky;
   top: 0;
+  position: sticky;
   z-index: 10;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
+    font-size: 1.8rem;
   }
 `;
 
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 8rem;
   z-index: 1;
-  width: 100%;
-  padding: 0 2.4rem;
-  max-width: 110rem;
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: red;
-  justify-self: flex-start;
   cursor: pointer;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  margin-left: 2.4rem;
-  font-weight: bold;
-  text-decoration: none;
+`;
+
+export const NavLogoSvg = styled.img`
+  height: 100%;
+  padding: 1rem;
+
+  @media screen and (max-width: 960px) {
+    height: 90%;
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -50,7 +45,7 @@ export const MobileIcon = styled.div`
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 3.2rem;
     cursor: pointer;
     color: #fff;
   }
@@ -61,7 +56,6 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -2.2rem;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -112,5 +106,9 @@ export const NavBtnLink = styled(LinkR)`
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 1.4rem;
   }
 `;

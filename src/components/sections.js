@@ -45,9 +45,9 @@ export const shopSection = {
   id: "shop",
   topLine: "Magazin",
   headline: "Echipamente sportive si produse specifice iernii",
-  description:
+  description1:
     "La baza cladirii avem si un magazin cu imbracaminte spefica iernii si echipamente de sporturi montane ",
-  description2: "",
+  description2: "Produsele se pot comanda si online de pe siteul nostru.",
   buttonLabel: "Magazin online",
   image: ShopImage,
   primary: false,

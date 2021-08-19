@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 import { FaBars } from "react-icons/fa";
 import { animateScroll } from "react-scroll";
+import Logo from "../../svg/logo.svg";
 import {
   Nav,
   NavbarContainer,
   NavLogo,
+  NavLogoSvg,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -36,7 +38,9 @@ export const Navbar: FC<Props> = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/ ">Club Rossignol</NavLogo>
+          <NavLogo to="/ ">
+            <NavLogoSvg src={Logo}></NavLogoSvg>
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>

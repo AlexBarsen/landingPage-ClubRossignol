@@ -30,9 +30,9 @@ export const Icon = styled.div`
   position: absolute;
   top: 1.2rem;
   right: 1.5rem;
-  background: transparent;
   font-size: 2rem;
-  cursor: pointer;
+  background: transparent;
+  /* cursor: pointer; */
   outline: none;
 `;
 
@@ -55,18 +55,13 @@ export const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 5rem;
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
   color: #fff;
-  cursor: pointer;
-
-  &:hover {
-    color: #01bf71;
-    transition: 0.2s ease-in-out;
-  }
+  /* cursor: pointer; */
 `;
 
 export const SideBtnWrap = styled.div`
@@ -76,14 +71,14 @@ export const SideBtnWrap = styled.div`
 
 export const SidebarRoute = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: rgb(244, 217, 73);
   white-space: nowrap;
   padding: 1.6rem 6.4rem;
   color: #010606;
   font-size: 1.6rem;
   outline: none;
   border: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 

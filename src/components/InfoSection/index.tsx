@@ -55,13 +55,7 @@ const InfoSection: FC<Props> = ({ section, imgStart }) => {
                 <Subtitle>{description1}</Subtitle>
                 <Subtitle>{description2}</Subtitle>
                 <ButtonWrapper>
-                  <Button
-                    to="/"
-                    paddingBig={true}
-                    primary={primary}
-                    dark={true}
-                    fontBig={true}
-                  >
+                  <Button to="/" primary={primary}>
                     {buttonLabel}
                   </Button>
                 </ButtonWrapper>

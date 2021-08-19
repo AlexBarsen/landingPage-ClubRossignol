@@ -32,13 +32,10 @@ const HeroSection = () => {
         </HeroHeading>
         <HeroBtnWrapper>
           <Button
-            to="features"
+            to="about"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            paddingBig={true}
-            primary={true}
-            dark={true}
-            fontBig={true}
+            primary={false}
           >
             Descopera locatia {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

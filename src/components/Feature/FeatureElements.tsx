@@ -6,7 +6,13 @@ export const FeatureContainer = styled.div`
   box-shadow: 0.5rem 0.5rem 1rem rgba(114, 82, 82, 1);
   border-radius: 1rem;
 
-  background-color: #d8e9f3;
+  border: 2px solid black;
+  background: #fff;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(77, 168, 218, 0.4),
+    rgba(0, 124, 199, 0.7)
+  );
   height: 28rem;
   width: 32rem;
   transition: all 0.3s;

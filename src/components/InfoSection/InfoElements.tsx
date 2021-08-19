@@ -12,17 +12,18 @@ export const InfoContainer = styled.div<Background>`
   min-height: 86rem;
   padding: 15rem 0;
   margin-top: -9rem;
+  background: rgba(0, 0, 0, 0.2);
   background-image: ${({ primary }) =>
     primary
       ? `linear-gradient(
     to right bottom,
     rgba(77, 168, 218, 1),
-    rgba(0, 124, 199, 0.7)
+    rgba(0, 124, 199, 0.2)
   );`
       : `linear-gradient(
-    to right bottom,
+    to left bottom,
     rgba(244, 217, 73, 1),
-    rgba(244, 217, 73, 0.7)
+    rgba(244, 217, 73, 0.2)
   );`};
 
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
@@ -36,19 +37,30 @@ export const InfoContainer = styled.div<Background>`
 export const InfoWrapper = styled.div<Background>`
   display: grid;
   min-height: 55rem;
-  width: 90%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   padding: 5rem 2.4rem;
   justify-content: center;
-  background: ${({ primary }) =>
-    primary ? `rgba(244, 217, 73, .85)` : `rgba(77, 168, 218, .85)`};
+  background: #fff;
+  background-image: ${({ primary }) =>
+    primary
+      ? `linear-gradient( 
+        to right bottom ,
+        rgba(244, 217, 73, .2),
+        rgba(244,217,73, .8));`
+      : `linear-gradient(
+    to left bottom,
+    rgba(77, 168, 218, .2),
+    rgba(0, 124, 199, 0.7)
+  );`};
+
   border-radius: 2rem;
 `;
 
 export const InfoRow = styled.div<Props>`
   display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+
   align-items: center;
 
   grid-template-areas: ${({ imgStart }) =>
@@ -62,7 +74,8 @@ export const InfoRow = styled.div<Props>`
 
 export const Column1 = styled.div`
   /* margin-bottom: 1.5rem; */
-  padding: 0 1.5rem;
+  padding-left: 2rem;
+
   grid-area: col1;
   @media screen and (max-width: 768px) {
     margin-top: 2.5rem;
@@ -116,12 +129,8 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div<Background>`
-  border-radius: 1rem;
-  max-width: 60rem;
-  border: ${({ primary }) =>
-    primary
-      ? `1.5rem outset rgb(77, 168, 218);`
-      : `1.5rem outset rgb(244, 217, 73);`};
+  border-radius: 2rem;
+  max-width: 70rem;
   box-shadow: 1rem 1rem 1.5rem rgba(114, 82, 82, 0.7);
   transition: all 0.2s ease-in-out;
 
@@ -131,5 +140,7 @@ export const ImageWrapper = styled.div<Background>`
 `;
 
 export const InfoImage = styled.img`
+  vertical-align: middle;
+  border-radius: inherit;
   width: 100%;
 `;
