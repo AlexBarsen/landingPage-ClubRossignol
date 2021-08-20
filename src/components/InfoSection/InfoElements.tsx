@@ -9,9 +9,10 @@ interface Background {
 }
 
 export const InfoContainer = styled.div<Background>`
-  min-height: 86rem;
+  display: flex;
+  height: 826px;
   padding: 15rem 0;
-  margin-top: -9rem;
+  margin-top: -8.25rem;
   background: rgba(0, 0, 0, 0.2);
   background-image: ${({ primary }) =>
     primary
@@ -29,19 +30,36 @@ export const InfoContainer = styled.div<Background>`
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   color: #fff;
 
+  @media screen and (max-width: 1100px) {
+    margin-top: -9.4rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    margin-top: -10.4rem;
+  }
+
   @media screen and (max-width: 768px) {
-    margin-top: -12rem;
+    margin-top: -11.7rem;
+    height: 750px;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: -11rem;
+    height: 600px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 520px;
   }
 `;
 
 export const InfoWrapper = styled.div<Background>`
   display: grid;
-  min-height: 55rem;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5rem 2.4rem;
-  justify-content: center;
+  align-items: center;
+  min-height: 530px;
+  width: 90%;
+  margin: auto;
+
   background: #fff;
   background-image: ${({ primary }) =>
     primary
@@ -56,11 +74,24 @@ export const InfoWrapper = styled.div<Background>`
   );`};
 
   border-radius: 2rem;
+
+  @media screen and (max-width: 1300px) {
+    min-height: 500px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    min-height: 400px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    padding: 4rem;
+  }
 `;
 
 export const InfoRow = styled.div<Props>`
   display: grid;
-
+  grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
 
   grid-template-areas: ${({ imgStart }) =>
@@ -97,6 +128,10 @@ export const TopLine = styled.p`
   font-size: 2rem;
   line-height: 1.6rem;
   margin-bottom: 1.6rem;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -104,9 +139,9 @@ export const Heading = styled.h1`
   color: black;
   font-size: 3rem;
 
-  /* @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     font-size: 2.2rem;
-  } */
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -115,9 +150,9 @@ export const Subtitle = styled.p`
   font-size: 2rem;
   color: black;
 
-  /* @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     font-size: 1.8rem;
-  } */
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -130,12 +165,17 @@ export const ButtonWrapper = styled.div`
 
 export const ImageWrapper = styled.div<Background>`
   border-radius: 2rem;
-  max-width: 70rem;
+
+  max-width: 680px;
   box-shadow: 1rem 1rem 1.5rem rgba(114, 82, 82, 0.7);
   transition: all 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 55rem;
   }
 `;
 
